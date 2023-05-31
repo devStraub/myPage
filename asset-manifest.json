@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/devStraub/myPage/static/css/main.c5da42ff.css",
+    "main.js": "/devStraub/myPage/static/js/main.84f0bcbe.js",
+    "static/js/787.69c1b68f.chunk.js": "/devStraub/myPage/static/js/787.69c1b68f.chunk.js",
+    "static/media/13937937___o.jpg": "/devStraub/myPage/static/media/13937937_1207669349257383_272992765336949516_o.6f91890e42464dfd1133.jpg",
+    "static/media/primeicons.svg": "/devStraub/myPage/static/media/primeicons.e1441b135b3ca9ad643c.svg",
+    "static/media/primeicons.eot": "/devStraub/myPage/static/media/primeicons.d44157bdfa026dc877af.eot",
+    "static/media/primeicons.woff": "/devStraub/myPage/static/media/primeicons.10d3152104f2208ac82a.woff",
+    "static/media/primeicons.ttf": "/devStraub/myPage/static/media/primeicons.ea5358601d0a3fd6670b.ttf",
+    "static/media/primeicons.woff2": "/devStraub/myPage/static/media/primeicons.78172950b335ccdb94e2.woff2",
+    "static/media/color.png": "/devStraub/myPage/static/media/color.6441e63a57ccc5105bad.png",
+    "index.html": "/devStraub/myPage/index.html",
+    "main.c5da42ff.css.map": "/devStraub/myPage/static/css/main.c5da42ff.css.map",
+    "main.84f0bcbe.js.map": "/devStraub/myPage/static/js/main.84f0bcbe.js.map",
+    "787.69c1b68f.chunk.js.map": "/devStraub/myPage/static/js/787.69c1b68f.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c5da42ff.css",
+    "static/js/main.84f0bcbe.js"
+  ]
+}
