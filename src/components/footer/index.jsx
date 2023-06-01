@@ -55,6 +55,14 @@ export default function Footer() {
                         severity="help"
                         rounded outlined />
                 </CopyToClipboard>
+                <a target='_blank' href='https://www.facebook.com/devStraub'>
+                    <Button
+                        tooltip='Facebook'
+                        tooltipOptions={{ position: 'top' }}
+                        icon="pi pi-facebook"
+                        severity="info"
+                        rounded outlined />
+                </a>                
             </div>
 
             <Toast ref={toast} />
