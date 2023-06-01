@@ -22,8 +22,11 @@ export default function Home() {
                     Welcome! Let's work together?
                 </span>
                 <div className="text-6xl text-primary font-bold mb-3">
-                    I'm a Software Developer since 2018
-                </div>                
+                    I'm a Software Developer
+                </div>              
+                <p className="mt-0 mb-4 text-700 line-height-3">
+                    SINCE 2018
+                </p>  
 
                 <div className='flex flex-wrap justify-content-center card-container gap-3'>
                     <Button
