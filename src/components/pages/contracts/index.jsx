@@ -15,63 +15,6 @@ export default function Contract() {
     const contracts = [
         {
             image: null,
-            client: <a target="_blank" href='https://www.benoit.com.br/institucional/quem-somos' style={{ textDecoration: 'none' }}>Benoit Eletrodomésticos LTDA</a>,
-            clientType: 'Retail',
-            contractor: 'Benoit Elétrodomésticos LTDA',
-            function: 'Web FullStack Developer',
-            status: 'End',
-            period: '56 months',
-            modality: 'CLT',
-            regime: 'Hybrid',
-            type: 'Hired',
-            frontend: {
-                resume: 'JSF',
-                details: {
-                    1: {
-                        name: 'JSF',
-                        more: {
-                            1: 'Primefaces',
-                        }
-                    }
-                }
-            },
-            backend: {
-                resume: 'Java',
-                details: {
-                    1: {
-                        name: 'Java',
-                        more: {
-                            1: 'EJB (Wildfly)',
-                            2: 'JPA',
-                            3: 'MVC'
-                        }
-                    }
-                }
-            },
-            database: {
-                resume: 'Oracle | PostgreSQL | ZIM',
-                details: {
-                    1: {
-                        name: 'SQL',
-                        more: {
-                            1: 'Oracle',
-                            2: 'PostgreSQL'
-                        }
-                    }
-                }
-            },
-            devops: {
-                resume: 'Git | Jenkins'
-            },
-            others: {
-                resume: 'BirtReport',
-                details: {
-
-                }
-            }
-        },
-        {
-            image: null,
             client: <a target="_blank" href='http://www.icnavais.com.br/content/icn-home' style={{ textDecoration: 'none' }}>Itaguaí Construções Navais</a>,
             clientType: 'Military',
             contractor: 'DClick',
@@ -154,7 +97,64 @@ export default function Contract() {
                 resume: 'JasperReport',
                 details: {}
             }
-        },             
+        },               
+        {
+            image: null,
+            client: <a target="_blank" href='https://www.benoit.com.br/institucional/quem-somos' style={{ textDecoration: 'none' }}>Benoit Eletrodomésticos LTDA</a>,
+            clientType: 'Retail',
+            contractor: 'Benoit Elétrodomésticos LTDA',
+            function: 'Web FullStack Developer',
+            status: 'End',
+            period: '56 months',
+            modality: 'CLT',
+            regime: 'Hybrid',
+            type: 'Hired',
+            frontend: {
+                resume: 'JSF',
+                details: {
+                    1: {
+                        name: 'JSF',
+                        more: {
+                            1: 'Primefaces',
+                        }
+                    }
+                }
+            },
+            backend: {
+                resume: 'Java',
+                details: {
+                    1: {
+                        name: 'Java',
+                        more: {
+                            1: 'EJB (Wildfly)',
+                            2: 'JPA',
+                            3: 'MVC'
+                        }
+                    }
+                }
+            },
+            database: {
+                resume: 'Oracle | PostgreSQL | ZIM',
+                details: {
+                    1: {
+                        name: 'SQL',
+                        more: {
+                            1: 'Oracle',
+                            2: 'PostgreSQL'
+                        }
+                    }
+                }
+            },
+            devops: {
+                resume: 'Git | Jenkins'
+            },
+            others: {
+                resume: 'BirtReport',
+                details: {
+
+                }
+            }
+        },      
     ]
 
     return (

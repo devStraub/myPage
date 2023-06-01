@@ -55,7 +55,7 @@ export default function About() {
                             </tr>                            
                             <tr>
                                 <td align='left'><strong>Skills Level</strong></td>
-                                <td align='right'>Full</td>
+                                <td align='right'>Mid</td>
                                 <td style={{ width: '100px'}}>
                                     <i className="pi pi-star-fill" style={{ fontSize: '1rem', margin: '2px' }} />
                                     <i className="pi pi-star-fill" style={{ fontSize: '1rem', margin: '2px' }} />
