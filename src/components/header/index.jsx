@@ -4,6 +4,7 @@ import React from 'react'
 import { useDispatch } from 'react-redux'
 import { showRightSidebar } from '../../redux/reducers/components/overlays/sidebar/right'
 import { setPage } from '../../redux/reducers/components/pages';
+import { setLanguage } from '../../redux/reducers/configs'
 
 // Primefaces
 import { Button } from 'primereact/button';
@@ -28,7 +29,25 @@ export default function Header() {
                     </div>
                 </Button>
             </div>
-            <div className='header-right'>
+            <div className='header-right' style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center'}}>
+                <div style={{ marginRight: '15px' }}>
+                    <Button
+                        tooltip='Português'
+                        tooltipOptions={{ position: 'bottom' }}
+                        label='PT'
+                        severity="info"
+                        rounded outlined text
+                        onClick={() => dispatch(setLanguage('PT'))} />
+
+                    <Button
+                        tooltip='English'
+                        tooltipOptions={{ position: 'bottom' }}
+                        label='EN'
+                        severity="info"
+                        rounded outlined text
+                        onClick={() => dispatch(setLanguage('EN'))} />
+                </div>
+
                 <Button icon="pi pi-bars" onClick={() => dispatch(showRightSidebar())} />
             </div>
         </>

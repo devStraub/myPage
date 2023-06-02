@@ -23,7 +23,7 @@ export default function Footer() {
                         icon="pi pi-envelope"
                         rounded outlined />
                 </CopyToClipboard>
-                <a target='_blank' href='https://api.whatsapp.com/send?phone=5551989249247'>
+                <a target='_blank' href='https://api.whatsapp.com/send?phone=5551989249247' style={{ textDecoration: 'none' }}>
                     <Button
                         tooltip='WhatsApp'
                         tooltipOptions={{ position: 'top' }}
@@ -31,7 +31,7 @@ export default function Footer() {
                         severity="success"
                         rounded outlined />
                 </a>
-                <a target='_blank' href='https://github.com/devStraub'>
+                <a target='_blank' href='https://github.com/devStraub' style={{ textDecoration: 'none' }}>
                     <Button
                         tooltip='GitHub'
                         tooltipOptions={{ position: 'top' }}
@@ -39,7 +39,7 @@ export default function Footer() {
                         severity="secondary"
                         rounded outlined />
                 </a>
-                <a target='_blank' href='https://www.linkedin.com/in/michel-henrique-straub-pech-ba2a0b75/'>
+                <a target='_blank' href='https://www.linkedin.com/in/michel-henrique-straub-pech-ba2a0b75/' style={{ textDecoration: 'none' }}>
                     <Button
                         tooltip='LinkedIn'
                         tooltipOptions={{ position: 'top' }}
@@ -55,7 +55,7 @@ export default function Footer() {
                         severity="help"
                         rounded outlined />
                 </CopyToClipboard>
-                <a target='_blank' href='https://www.facebook.com/devStraub'>
+                <a target='_blank' href='https://www.facebook.com/devStraub' style={{ textDecoration: 'none' }}>
                     <Button
                         tooltip='Facebook'
                         tooltipOptions={{ position: 'top' }}

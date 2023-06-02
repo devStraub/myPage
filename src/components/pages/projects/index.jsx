@@ -52,7 +52,7 @@ export default function Projects() {
     const footer = (project) => (
         <div className="flex flex-wrap justify-content-center gap-2">
             {project.githubLink &&
-                <a target='_blank' href={project.githubLink}>
+                <a target='_blank' href={project.githubLink} style={{ textDecoration: 'none' }}>
                     <Button
                         tooltip='Code'
                         tooltipOptions={{ position: 'top' }}

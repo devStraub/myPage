@@ -11,25 +11,29 @@ export const routes = [
     path: '/',
     component: <Home/>,
     exact: true,
-    label: 'Home',    
+    labelEN: 'Home',
+    labelPT: 'Início',    
   }, 
   {
     path: '/about',
     component: <About/>,
     exact: true,
-    label: 'About',    
+    labelEN: 'About',    
+    labelPT: 'Sobre',
   },   
   {
     path: '/contracts',
     component: <Contracts/>,
     exact: true,
-    label: 'Contracts',    
+    labelEN: 'Contracts', 
+    labelPT: 'Contratos',   
   },      
   {
     path: '/projects',
     component: <Projects/>,
     exact: true,
-    label: 'Projects',    
+    labelEN: 'Projects',
+    labelPT: 'Projetos',    
   },    
 ];
 

@@ -1,5 +1,7 @@
 import React from 'react'
 
+// Redux
+import { useSelector } from 'react-redux'
 
 // Primefaces
 import { Button } from 'primereact/button';
@@ -15,17 +17,22 @@ import {
 
 export default function Home() {
 
+    const language = useSelector(state => state.ConfigController.language)   
+
     return (
         <>
             <div>
                 <span className="block text-6xl font-bold mb-1">
-                    Welcome! Let's work together?
+                    {language === 'EN' && "Welcome! Let's work together?"}
+                    {language === 'PT' && "Bem vindo! Vamos trabalhar juntos?"}
                 </span>
                 <div className="text-6xl text-primary font-bold mb-3">
-                    I'm a Software Developer
+                    {language === 'EN' && "I'm a Software Developer"}
+                    {language === 'PT' && "Eu sou um Desenvolvedor de Software"}                    
                 </div>              
                 <p className="mt-0 mb-4 text-700 line-height-3">
-                    SINCE 2018
+                    {language === 'EN' && "SINCE 2018"}                    
+                    {language === 'PT' && "DESDE 2018"} 
                 </p>  
 
                 <div className='flex flex-wrap justify-content-center card-container gap-3'>

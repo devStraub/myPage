@@ -1,5 +1,8 @@
 import React from 'react'
 
+// Redux
+import { useSelector, useDispatch } from 'react-redux'
+
 // Primefaces
 import { Card } from 'primereact/card';
 import { Button } from 'primereact/button';
@@ -12,6 +15,153 @@ import Table from 'react-bootstrap/Table';
 
 export default function Contract() {
 
+    const language = useSelector(state => state.ConfigController.language)
+
+    const contratosPT = [
+        {
+            image: null,
+            client: <a target="_blank" href='http://www.icnavais.com.br/content/icn-home' style={{ textDecoration: 'none' }}>Itaguaí Construções Navais</a>,
+            clientType: 'Militar',
+            contractor: 'DClick',
+            function: 'Analista de Sistemas',
+            start: '02/2022',
+            end: 'Ativo',
+            modality: 'CNPJ',
+            regime: 'Remoto',
+            type: 'Terceirizado',
+            frontend: {
+                resume: 'React | JSF',
+                details: {
+                    1: {
+                        name: 'React',
+                        more: {
+                            1: 'Primefaces',
+                            2: 'Bootstrap',
+                            3: 'Redux',
+                            4: 'Router-Dom',
+                            5: 'ContextAPI',
+                        }
+                    },
+                    2: {
+                        name: 'JSF',
+                        more: {
+                            1: 'Primefaces',
+                        }
+                    }
+                }
+            },
+            backend: {
+                resume: 'Java',
+                details: {
+                    1: {
+                        name: 'Java',
+                        more: {
+                            1: 'EJB (JBoss)',
+                            2: 'JPA',
+                            3: 'MVC',
+                            4: 'Spring Boot'
+                        }
+                    }
+                }
+            },
+            database: {
+                resume: 'Oracle | MongoDB',
+                details: {
+                    1: {
+                        name: 'SQL',
+                        more: {
+                            1: 'Oracle'
+                        }
+                    },
+                    2: {
+                        name: 'NoSQL',
+                        more: {
+                            1: 'MongoDB'
+                        }
+                    }
+                }
+            },
+            devops: {
+                resume: 'Git | Docker | Portainer | Jenkins',
+                details: {
+                    1: {
+                        name: 'Docker',
+                        more: {}
+                    },
+                    2: {
+                        name: 'Portainer',
+                        more: {}
+                    },
+                    3: {
+                        name: 'Jenkins',
+                        more: {}
+                    },
+                }
+            },
+            others: {
+                resume: 'JasperReport',
+                details: {}
+            }
+        },
+        {
+            image: null,
+            client: <a target="_blank" href='https://www.benoit.com.br/institucional/quem-somos' style={{ textDecoration: 'none' }}>Benoit Eletrodomésticos LTDA</a>,
+            clientType: 'Varejo',
+            contractor: 'Benoit Elétrodomésticos LTDA',
+            function: 'Desenvolvedor Web FullStack',
+            start: '08/2018',
+            end: '04/2023',
+            modality: 'CLT',
+            regime: 'Híbrido',
+            type: 'Contratado',
+            frontend: {
+                resume: 'JSF',
+                details: {
+                    1: {
+                        name: 'JSF',
+                        more: {
+                            1: 'Primefaces',
+                        }
+                    }
+                }
+            },
+            backend: {
+                resume: 'Java',
+                details: {
+                    1: {
+                        name: 'Java',
+                        more: {
+                            1: 'EJB (Wildfly)',
+                            2: 'JPA',
+                            3: 'MVC'
+                        }
+                    }
+                }
+            },
+            database: {
+                resume: 'Oracle | PostgreSQL | ZIM',
+                details: {
+                    1: {
+                        name: 'SQL',
+                        more: {
+                            1: 'Oracle',
+                            2: 'PostgreSQL'
+                        }
+                    }
+                }
+            },
+            devops: {
+                resume: 'Git | Jenkins'
+            },
+            others: {
+                resume: 'BirtReport',
+                details: {
+
+                }
+            }
+        },
+    ]
+
     const contracts = [
         {
             image: null,
@@ -19,8 +169,8 @@ export default function Contract() {
             clientType: 'Military',
             contractor: 'DClick',
             function: 'Software Engeneer',
-            status: 'Active',
-            period: '15 months',
+            start: '02/2022',
+            end: 'Active',
             modality: 'CNPJ',
             regime: 'Remote',
             type: 'Outsourced',
@@ -97,14 +247,15 @@ export default function Contract() {
                 resume: 'JasperReport',
                 details: {}
             }
-        },               
+        },
         {
             image: null,
             client: <a target="_blank" href='https://www.benoit.com.br/institucional/quem-somos' style={{ textDecoration: 'none' }}>Benoit Eletrodomésticos LTDA</a>,
             clientType: 'Retail',
             contractor: 'Benoit Elétrodomésticos LTDA',
             function: 'Web FullStack Developer',
-            status: 'End',
+            start: '08/2018',
+            end: '04/2023',
             period: '56 months',
             modality: 'CLT',
             regime: 'Hybrid',
@@ -154,13 +305,13 @@ export default function Contract() {
 
                 }
             }
-        },      
+        },
     ]
 
     return (
         <>
-            <Row className="g-3">
-                {contracts.map((contract, idx) => (
+            <Row className="g-3">                
+                {language === 'EN' && contracts.map((contract, idx) => (
                     <Col key={idx}>
                         <Card title={contract.client} subTitle={contract.function} className="md:w-25rem">
                             <Table striped bordered hover size="sm" variant="dark">
@@ -212,15 +363,87 @@ export default function Contract() {
                                         <td align='right'>{contract.type}</td>
                                     </tr>
                                     <tr>
-                                        <td align='left'><strong>Status</strong></td>
-                                        <td align='right'>{contract.status}</td>
+                                        <td align='left'><strong>Start</strong></td>
+                                        <td align='right'>{contract.start}</td>
                                     </tr>
                                     <tr>
-                                        <td align='left'><strong>Period</strong></td>
-                                        <td align='right'>{contract.period}</td>
-                                    </tr>
+                                        <td align='left'><strong>End</strong></td>
+                                        <td align='right'>{contract.end}</td>
+                                    </tr> 
                                     <tr>
                                         <td align='left'><strong>Modality</strong></td>
+                                        <td align='right'>{contract.modality}</td>
+                                    </tr>
+                                    <tr>
+                                        <td align='left'><strong>Regime</strong></td>
+                                        <td align='right'>{contract.regime}</td>
+                                    </tr>
+                                </tbody>
+                            </Table>
+                        </Card>
+                    </Col>
+                ))}
+                {language === 'PT' && contratosPT.map((contract, idx) => (
+                    <Col key={idx}>
+                        <Card title={contract.client} subTitle={contract.function} className="md:w-25rem">
+                            <Table striped bordered hover size="sm" variant="dark">
+                                <thead>
+                                    <tr>
+                                        <th colSpan='2'>Tecnologias</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td align='left' ><strong>Frontend</strong></td>
+                                        <td align='right'>{contract.frontend.resume}</td>
+                                    </tr>
+                                    <tr>
+                                        <td align='left'><strong>Backend</strong></td>
+                                        <td align='right'>{contract.backend.resume}</td>
+                                    </tr>
+                                    <tr>
+                                        <td align='left'><strong>Banco de Dados</strong></td>
+                                        <td align='right'>{contract.database.resume}</td>
+                                    </tr>
+                                    <tr>
+                                        <td align='left'><strong>DevOps</strong></td>
+                                        <td align='right'>{contract.devops.resume}</td>
+                                    </tr>
+                                    <tr>
+                                        <td align='left'><strong>Outros</strong></td>
+                                        <td align='right'>{contract.others.resume}</td>
+                                    </tr>
+                                </tbody>
+                            </Table>
+                            <Table striped bordered hover size="sm" variant="dark">
+                                <thead>
+                                    <tr>
+                                        <th colSpan='2'>Detalhes do Contrato</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td align='left'><strong>Negócio</strong></td>
+                                        <td align='right'>{contract.clientType}</td>
+                                    </tr>
+                                    <tr>
+                                        <td align='left'><strong>Contratante</strong></td>
+                                        <td align='right'>{contract.contractor}</td>
+                                    </tr>
+                                    <tr>
+                                        <td align='left'><strong>Vínculo</strong></td>
+                                        <td align='right'>{contract.type}</td>
+                                    </tr>
+                                    <tr>
+                                        <td align='left'><strong>Início</strong></td>
+                                        <td align='right'>{contract.start}</td>
+                                    </tr>
+                                    <tr>
+                                        <td align='left'><strong>Fim</strong></td>
+                                        <td align='right'>{contract.end}</td>
+                                    </tr>                                    
+                                    <tr>
+                                        <td align='left'><strong>Modalidade</strong></td>
                                         <td align='right'>{contract.modality}</td>
                                     </tr>
                                     <tr>

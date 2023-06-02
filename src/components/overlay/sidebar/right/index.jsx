@@ -15,6 +15,7 @@ import { routes } from '../../../../routes'
 export default function RightSidebar() {
 
     const visible = useSelector(state => state.rightSidebarView.value)
+    const language = useSelector(state => state.ConfigController.language)
     const dispatch = useDispatch()
 
     return (
@@ -28,7 +29,12 @@ export default function RightSidebar() {
             {routes.map((route, index) => (
                 <Button
                     key={index}
-                    label={route.label}
+                    label={
+                        <>
+                            {language === 'EN' && route.labelEN}
+                            {language === 'PT' && route.labelPT}
+                        </>
+                    }
                     style={{ width: '100%', marginBlock: '5px' }}
                     onClick={() => {
                         dispatch(setPage(route.component))

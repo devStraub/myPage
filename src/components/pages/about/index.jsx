@@ -1,5 +1,8 @@
 import React from 'react'
 
+// Redux
+import { useSelector } from 'react-redux'
+
 // Primefaces
 import { Card } from 'primereact/card';
 import { Image } from 'primereact/image';
@@ -14,6 +17,8 @@ import Photo from '../../../resources/images/13937937_1207669349257383_272992765
 
 export default function About() {
 
+    const language = useSelector(state => state.ConfigController.language)
+
     return (
         <>
             <Row className="gap-2">
@@ -21,7 +26,10 @@ export default function About() {
                     title="Michel Henrique Straub Pech"
                     footer={
                         <>
-                            <p>Let's work togheter?</p>
+                            <p>
+                                {language === 'EN' && "Let's work togheter?"}
+                                {language === 'PT' && "Vamos trabalhar juntos?"}
+                            </p>
                         </>
                     }
                     header={
@@ -34,69 +42,132 @@ export default function About() {
                     <Table striped bordered hover size="sm" variant="dark">
                         <tbody>
                             <tr>
-                                <td align='left'><strong>Birth</strong></td>
+                                <td align='left'>
+                                    <strong>
+                                        {language === 'EN' && "Birth"}
+                                        {language === 'PT' && "Nascimento"}
+                                    </strong>
+                                </td>
                                 <td align='right'>27/08/1995</td>
-                                <td >27 Years</td>
+                                <td>
+                                    {language === 'EN' && "27 Years"}
+                                    {language === 'PT' && "27 Anos"}
+                                </td>
                             </tr>
                             <tr>
-                                <td align='left'><strong>Nationality</strong></td>
-                                <td align='right'>Brazilian</td>
-                                <td >BR</td>
+                                <td align='left'>
+                                    <strong>
+                                        {language === 'EN' && "Nationality"}
+                                        {language === 'PT' && "Nacionalidade"}
+                                    </strong>
+                                </td>
+                                <td align='right'>
+                                    {language === 'EN' && "Brazilian"}
+                                    {language === 'PT' && "Brasileiro"}
+                                </td>
+                                <td>BR</td>
                             </tr>
                             <tr>
-                                <td align='left'><strong>Graduation</strong></td>
-                                <td align='right'>Analysis and Development Systems</td>
+                                <td align='left'>
+                                    <strong>
+                                        {language === 'EN' && "Degree"}
+                                        {language === 'PT' && "Graduação"}
+                                    </strong>
+                                </td>
+                                <td align='right'>
+                                    {language === 'EN' && "Analysis and Development Systems"}
+                                    {language === 'PT' && "Análise e Desenvolvimento de Sistemas"}
+                                </td>
                                 <td>2020</td>
                             </tr>
                             <tr>
-                                <td align='left'><strong>Postgraduate</strong></td>
-                                <td align='right'>IT Project Management</td>
-                                <td>2022</td>
-                            </tr>                            
-                            <tr>
-                                <td align='left'><strong>Skills Level</strong></td>
-                                <td align='right'>Mid</td>
-                                <td style={{ width: '100px'}}>
-                                    <i className="pi pi-star-fill" style={{ fontSize: '1rem', margin: '2px' }} />
-                                    <i className="pi pi-star-fill" style={{ fontSize: '1rem', margin: '2px' }} />
-                                    <i className="pi pi-star" style={{ fontSize: '1rem', margin: '2px' }} />
+                                <td align='left'>
+                                    <strong>
+                                        MBA
+                                    </strong>
                                 </td>
+                                <td align='right'>
+                                    {language === 'EN' && "IT Project Management"}
+                                    {language === 'PT' && "Gestão de Projetos de TI"}
+                                </td>
+                                <td>2022</td>
                             </tr>
                         </tbody>
                     </Table>
                 </Card>
 
                 <Card
-                    title="About me"
+                    title={
+                        <>
+                            {language === 'EN' && "About me"}
+                            {language === 'PT' && "Sobre mim"}
+                        </>                        
+                    }
                     className="md:w-20rem" >
                     <>
-                        <p>
-                            Hi, my name is Michel, and I've been working with programming since 2018.
-                            I believe that the main skills of a programmer need
-                            be those of solving problems and creating solutions, and these qualities
-                            are my greatest virtues.
-                        </p>
-                        <p>
-                            If you are looking for a dedicated professional who offers loyalty,
-                            that is, that you don't run away when the problem appears, you found it.
-                            What I ask in return is that loyalty be a two-way street. If you
-                            offer yours, you will get mine.
-                        </p>
-                        <p>
-                            After all, I'm just a young guy looking for personal growth
-                            and professional, always aiming to deliver interesting results and
-                            obtaining fair financial compensation in return.
-                        </p>
-                        <p>
-                            If you're interested, I'll be happy to talk and exchange ideas.
-                            You can contact me through the means provided at the bottom of this page.
-                            It will be a pleasure to drink a good cup of coffee and get to know you.
-                        </p>
-                        <p>
-                            If you're a gamer in your spare time, like me, we can play something together
-                            while we exchange this idea and drink the coffee. If you like Age of Empires II,
-                            I'm sure it will be fun.
-                        </p>
+                        {language === 'EN' &&
+                            <>
+                                <p>
+                                    Hi, my name is Michel, and I've been working with programming since 2018.
+                                    I believe that the main skills of a programmer need
+                                    be those of solving problems and creating solutions, and these qualities
+                                    are my greatest virtues.
+                                </p>
+
+                                <p>
+                                    If you are looking for a dedicated professional who offers loyalty,
+                                    that is, that you don't run away when the problem appears, you found it.
+                                    What I ask in return is that loyalty be a two-way street. If you
+                                    offer yours, you will get mine.
+                                </p>
+                                <p>
+                                    After all, I'm just a young guy looking for personal growth
+                                    and professional, always aiming to deliver interesting results and
+                                    obtaining fair financial compensation in return.
+                                </p>
+                                <p>
+                                    If you're interested, I'll be happy to talk and exchange ideas.
+                                    You can contact me through the means provided at the bottom of this page.
+                                    It will be a pleasure to drink a good cup of coffee and get to know you.
+                                </p>
+                                <p>
+                                    If you're a gamer in your spare time, like me, we can play something together
+                                    while we exchange this idea and drink the coffee. If you like Age of Empires II,
+                                    I'm sure it will be fun.
+                                </p>
+                            </>
+                        }
+                        {language === 'PT' &&
+                            <>
+                                <p>
+                                    Olá, meu nome é Michel, e trabalho com programação desde 2018.
+                                    Acredito que as principais habilidades de um programador sejam as
+                                    de resolver problemas e criar soluções, e essas qualidades
+                                    são minhas maiores virtudes.
+                                </p>
+                                <p>
+                                    Se você procura um profissional dedicado e leal,
+                                    ou seja, que não fuja quando o problema aparecer, você o encontrou.
+                                    O que peço em troca é que a lealdade seja uma via de mão dupla. Se você
+                                    oferecer a sua, receberá a minha.
+                                </p>
+                                <p>
+                                    Sou apenas um jovem em busca de crescimento pessoal
+                                    e profissional, sempre visando entregar resultados interessantes e
+                                    obter uma compensação financeira justa em troca.
+                                </p>
+                                <p>
+                                    Caso tenha interesse, ficarei feliz em conversar e trocar ideias.
+                                    Pode contactar-me através dos meios disponibilizados no rodapé desta página.
+                                    Será um prazer tomar um bom café e conhecê-lo.
+                                </p>
+                                <p>
+                                    Se você é um gamer nas horas vagas, como eu, podemos jogar algo juntos
+                                    enquanto trocamos essa ideia e tomamos o café. Se você gosta do Age of Empires II,
+                                    Tenho certeza que será divertido.
+                                </p>
+                            </>
+                        }
                     </>
                 </Card>
             </Row>
