@@ -32,6 +32,12 @@ export default function Projects() {
             description: 'description',
             name: 'Jasper Report API',
         },
+        {
+            language: <DiJava style={{ fontSize: '50px' }} />,
+            githubLink: 'https://github.com/devStraub/TokenAPI',
+            description: 'description',
+            name: 'Token API',
+        },        
         /*{
             language: <DiReact style={{ fontSize: '50px' }} />,
             githubLink: 'link',
