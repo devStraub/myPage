@@ -1,7 +1,7 @@
 import React from 'react'
 
 // Redux
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { showRightSidebar } from '../../redux/reducers/components/overlays/sidebar/right'
 import { setPage } from '../../redux/reducers/components/pages';
 import { setLanguage } from '../../redux/reducers/configs'
@@ -17,6 +17,7 @@ import Home from '../pages/home';
 
 export default function Header() {
 
+    const language = useSelector(state => state.ConfigController.language)
     const dispatch = useDispatch()
 
     return (
@@ -32,20 +33,25 @@ export default function Header() {
             <div className='header-right' style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center'}}>
                 <div style={{ marginRight: '15px' }}>
                     <Button
-                        tooltip='Português'
+                        tooltip={language === 'PT' ? 'English' : 'Português'}
                         tooltipOptions={{ position: 'bottom' }}
-                        label='PT'
+                        label={
+                            <>
+                                {language === 'PT' && 'EN'}
+                                {language === 'EN' && 'PT'}
+                            </>
+                        }
                         severity="info"
                         rounded outlined text
-                        onClick={() => dispatch(setLanguage('PT'))} />
+                        onClick={() => {
+                            if (language === 'EN'){
+                                dispatch(setLanguage('PT'))
+                            }
 
-                    <Button
-                        tooltip='English'
-                        tooltipOptions={{ position: 'bottom' }}
-                        label='EN'
-                        severity="info"
-                        rounded outlined text
-                        onClick={() => dispatch(setLanguage('EN'))} />
+                            if (language === 'PT'){
+                                dispatch(setLanguage('EN'))
+                            }                            
+                        }} />
                 </div>
 
                 <Button icon="pi pi-bars" onClick={() => dispatch(showRightSidebar())} />

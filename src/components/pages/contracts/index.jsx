@@ -20,7 +20,24 @@ export default function Contract() {
     const contratosPT = [
         {
             image: null,
-            client: <a target="_blank" href='http://www.icnavais.com.br/content/icn-home' style={{ textDecoration: 'none' }}>Itaguaí Construções Navais</a>,
+            client:
+                <>
+                    <strong>Itaguaí Construções Navais</strong>
+                    <a target='_blank' href='http://www.icnavais.com.br/content/icn-home' style={{ textDecoration: 'none' }}>
+                        <Button
+                            label={
+                                <>
+                                    {language === 'EN' && 'See More'}
+                                    {language === 'PT' && 'Ver Mais'}
+                                </>
+                            }
+                            severity="info"
+                            rounded outlined
+                            style={{ margin: '10px' }}
+                        />
+                    </a>
+                </>,
+            link: 'http://www.icnavais.com.br/content/icn-home',
             clientType: 'Militar',
             contractor: 'DClick',
             function: 'Analista de Sistemas',
@@ -105,7 +122,24 @@ export default function Contract() {
         },
         {
             image: null,
-            client: <a target="_blank" href='https://www.benoit.com.br/institucional/quem-somos' style={{ textDecoration: 'none' }}>Benoit Eletrodomésticos LTDA</a>,
+            client:
+                <>
+                    <strong>Benoit Elétrodomésticos LTDA</strong>
+                    <a target='_blank' href='https://www.benoit.com.br/institucional/quem-somos' style={{ textDecoration: 'none' }}>
+                        <Button
+                            label={
+                                <>
+                                    {language === 'EN' && 'See More'}
+                                    {language === 'PT' && 'Ver Mais'}
+                                </>
+                            }
+                            severity="info"
+                            rounded outlined
+                            style={{ margin: '10px' }}
+                        />
+                    </a>
+                </>,
+            link: 'https://www.benoit.com.br/institucional/quem-somos',
             clientType: 'Varejo',
             contractor: 'Benoit Elétrodomésticos LTDA',
             function: 'Desenvolvedor Web FullStack',
@@ -165,7 +199,24 @@ export default function Contract() {
     const contracts = [
         {
             image: null,
-            client: <a target="_blank" href='http://www.icnavais.com.br/content/icn-home' style={{ textDecoration: 'none' }}>Itaguaí Construções Navais</a>,
+            client:
+                <>
+                    <strong>Itaguaí Construções Navais</strong>
+                    <a target='_blank' href='http://www.icnavais.com.br/content/icn-home' style={{ textDecoration: 'none' }}>
+                        <Button
+                            label={
+                                <>
+                                    {language === 'EN' && 'See More'}
+                                    {language === 'PT' && 'Ver Mais'}
+                                </>
+                            }
+                            severity="info"
+                            rounded outlined
+                            style={{ margin: '10px' }}
+                        />
+                    </a>
+                </>,
+            link: 'http://www.icnavais.com.br/content/icn-home',
             clientType: 'Military',
             contractor: 'DClick',
             function: 'Software Engeneer',
@@ -250,7 +301,24 @@ export default function Contract() {
         },
         {
             image: null,
-            client: <a target="_blank" href='https://www.benoit.com.br/institucional/quem-somos' style={{ textDecoration: 'none' }}>Benoit Eletrodomésticos LTDA</a>,
+            client:
+                <>
+                    <strong>Benoit Elétrodomésticos LTDA</strong>
+                    <a target='_blank' href='https://www.benoit.com.br/institucional/quem-somos' style={{ textDecoration: 'none' }}>
+                        <Button
+                            label={
+                                <>
+                                    {language === 'EN' && 'See More'}
+                                    {language === 'PT' && 'Ver Mais'}
+                                </>
+                            }
+                            severity="info"
+                            rounded outlined
+                            style={{ margin: '10px' }}
+                        />
+                    </a>
+                </>,
+            link: 'https://www.benoit.com.br/institucional/quem-somos',
             clientType: 'Retail',
             contractor: 'Benoit Elétrodomésticos LTDA',
             function: 'Web FullStack Developer',
@@ -310,7 +378,7 @@ export default function Contract() {
 
     return (
         <>
-            <Row className="g-3">                
+            <Row className="g-3">
                 {language === 'EN' && contracts.map((contract, idx) => (
                     <Col key={idx}>
                         <Card title={contract.client} subTitle={contract.function} className="md:w-25rem">
@@ -369,7 +437,7 @@ export default function Contract() {
                                     <tr>
                                         <td align='left'><strong>End</strong></td>
                                         <td align='right'>{contract.end}</td>
-                                    </tr> 
+                                    </tr>
                                     <tr>
                                         <td align='left'><strong>Modality</strong></td>
                                         <td align='right'>{contract.modality}</td>
@@ -441,7 +509,7 @@ export default function Contract() {
                                     <tr>
                                         <td align='left'><strong>Fim</strong></td>
                                         <td align='right'>{contract.end}</td>
-                                    </tr>                                    
+                                    </tr>
                                     <tr>
                                         <td align='left'><strong>Modalidade</strong></td>
                                         <td align='right'>{contract.modality}</td>
