@@ -21,6 +21,12 @@ export default function Projects() {
 
     const projects = [
         {
+            language: <DiReact style={{ fontSize: '50px' }} />,
+            githubLink: 'https://github.com/devStraub/myPage',
+            description: 'description',
+            name: 'DevStraub Page',
+        },          
+        {
             language: <DiJava style={{ fontSize: '50px' }} />,
             githubLink: 'https://github.com/devStraub/BirtAPI',
             description: 'description',
@@ -38,12 +44,12 @@ export default function Projects() {
             description: 'description',
             name: 'Token API',
         },        
-        /*{
+        {
             language: <DiReact style={{ fontSize: '50px' }} />,
-            githubLink: 'link',
+            githubLink: 'https://github.com/devStraub/Wedding',
             description: 'description',
-            name: 'Weather Forecast',
-        },*/
+            name: 'Wedding',
+        },      
     ]
 
     const header = (project) => (
@@ -82,7 +88,7 @@ export default function Projects() {
 
     return (
         <>
-            <Row className="gap-3">
+            <Row className="flex flex-wrap justify-content-center align-items-center gap-5">
                 {projects.map((project, idx) => (
                     <Card
                         key={idx}

@@ -378,7 +378,7 @@ export default function Contract() {
 
     return (
         <>
-            <Row className="g-3">
+            <Row className="flex flex-wrap justify-content-center align-items-center g-2">
                 {language === 'EN' && contracts.map((contract, idx) => (
                     <Col key={idx}>
                         <Card title={contract.client} subTitle={contract.function} className="md:w-25rem">
