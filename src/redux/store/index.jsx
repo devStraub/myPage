@@ -9,6 +9,7 @@ import rightSidebarReducer from '../reducers/components/overlays/sidebar/right'
 import leftSidebarReducer  from '../reducers/components/overlays/sidebar/left'
 import modalReducer from '../reducers/components/overlays/dialog/modal'
 import dialogConfirmReducer from '../reducers/components/overlays/dialog/confirm'
+import toastReducer from '../reducers/components/overlays/toast'
 
 export default configureStore({
   reducer: {
@@ -18,7 +19,8 @@ export default configureStore({
     rightSidebarView: rightSidebarReducer,
     leftSidebarView: leftSidebarReducer,
     modalView: modalReducer,
-    dialogConfirmView: dialogConfirmReducer
+    dialogConfirmView: dialogConfirmReducer,
+    toastView: toastReducer,
   },
   middleware: getDefaultMiddleware =>
   getDefaultMiddleware({

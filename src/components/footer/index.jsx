@@ -1,22 +1,22 @@
 import React from 'react'
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 
+// Redux
+import { useDispatch } from 'react-redux'
+import { showToast, showSucess, showError } from '../../redux/reducers/components/overlays/toast'
+
 // Primefaces
 import { Button } from 'primereact/button';
-import { Toast } from 'primereact/toast';
 
 export default function Footer() {
 
-    const toast = React.useRef(null);
-
-    const show = (props) => {
-        toast.current.show({ severity: 'info', summary: props.message });
-    };
+    // Redux
+    const dispatch = useDispatch()
 
     return (
         <>
             <div className='flex flex-wrap justify-content-center card-container gap-3'>
-                <CopyToClipboard text="michel.pech@outlook.com.br" onCopy={() => show({ message: 'E-mail copied!' })}>
+                <CopyToClipboard text="michel.pech@outlook.com.br" onCopy={() => dispatch(showToast({ severity: 'info', summary: 'E-mail copied!' }))}>
                     <Button
                         tooltip='E-Mail'
                         tooltipOptions={{ position: 'top' }}
@@ -47,7 +47,7 @@ export default function Footer() {
                         severity="info"
                         rounded outlined />
                 </a>
-                <CopyToClipboard text="Michel Pech#1242" onCopy={() => show({ message: 'Discord Profile copied!' })}>
+                <CopyToClipboard text="Michel Pech#1242" onCopy={() => dispatch(showToast({ severity: 'info', summary: 'Discord Profile copied!' }))}>
                     <Button
                         tooltip='Discord'
                         tooltipOptions={{ position: 'top' }}
@@ -64,8 +64,6 @@ export default function Footer() {
                         rounded outlined />
                 </a>                
             </div>
-
-            <Toast ref={toast} />
         </>
     )
 }

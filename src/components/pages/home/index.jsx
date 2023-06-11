@@ -22,7 +22,7 @@ export default function Home() {
     return (
         <>
             <div>
-                <span className="block text-6xl font-bold mb-1">
+                <span className="block text-6xl text-700 font-bold mb-1">
                     {language === 'EN' && "Welcome! Let's work together?"}
                     {language === 'PT' && "Bem vindo! Vamos trabalhar juntos?"}
                 </span>
