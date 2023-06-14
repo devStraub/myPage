@@ -113,15 +113,8 @@ export default function About() {
                                     be those of solving problems and creating solutions, and these qualities
                                     are my greatest virtues.
                                 </p>
-
                                 <p>
-                                    If you are looking for a dedicated professional who offers loyalty,
-                                    that is, that you don't run away when the problem appears, you found it.
-                                    What I ask in return is that loyalty be a two-way street. If you
-                                    offer yours, you will get mine.
-                                </p>
-                                <p>
-                                    After all, I'm just a young guy looking for personal growth
+                                    I'm just a young guy looking for personal growth
                                     and professional, always aiming to deliver interesting results and
                                     obtaining fair financial compensation in return.
                                 </p>
@@ -144,12 +137,6 @@ export default function About() {
                                     Acredito que as principais habilidades de um programador sejam as
                                     de resolver problemas e criar soluções, e essas qualidades
                                     são minhas maiores virtudes.
-                                </p>
-                                <p>
-                                    Se você procura um profissional dedicado e leal,
-                                    ou seja, que não fuja quando o problema aparecer, você o encontrou.
-                                    O que peço em troca é que a lealdade seja uma via de mão dupla. Se você
-                                    oferecer a sua, receberá a minha.
                                 </p>
                                 <p>
                                     Sou apenas um jovem em busca de crescimento pessoal
