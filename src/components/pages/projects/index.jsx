@@ -43,13 +43,7 @@ export default function Projects() {
             githubLink: 'https://github.com/devStraub/TokenAPI',
             description: 'description',
             name: 'Token API',
-        },        
-        {
-            language: <DiReact style={{ fontSize: '50px' }} />,
-            githubLink: 'https://github.com/devStraub/Wedding',
-            description: 'description',
-            name: 'Wedding',
-        },     
+        },            
         {
             language: <DiJava style={{ fontSize: '50px' }} />,
             githubLink: 'https://github.com/devStraub/emailSenderAPI',
