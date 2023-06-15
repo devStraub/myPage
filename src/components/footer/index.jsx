@@ -8,6 +8,9 @@ import { showToast, showSucess, showError } from '../../redux/reducers/component
 // Primefaces
 import { Button } from 'primereact/button';
 
+// Resources
+import CV from '../../resources/documents/cv.pdf'
+
 export default function Footer() {
 
     // Redux
@@ -62,7 +65,14 @@ export default function Footer() {
                         icon="pi pi-facebook"
                         severity="info"
                         rounded outlined />
-                </a>                
+                </a>  
+                <a target='_blank' href={CV} download style={{ textDecoration: 'none' }}>
+                    <Button
+                        tooltip='CV'
+                        tooltipOptions={{ position: 'top' }}
+                        icon="pi pi-id-card"
+                        rounded outlined />
+                </a>                    
             </div>
         </>
     )
