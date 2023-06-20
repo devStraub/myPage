@@ -4,7 +4,6 @@ import { Route, Routes } from 'react-router-dom';
 import Home from './components/pages/home';
 import About from './components/pages/about';
 import Projects from './components/pages/projects';
-import Contracts from './components/pages/contracts'
 
 export const routes = [
   {
@@ -20,14 +19,7 @@ export const routes = [
     exact: true,
     labelEN: 'About',    
     labelPT: 'Sobre',
-  },   
-  {
-    path: '/contracts',
-    component: <Contracts/>,
-    exact: true,
-    labelEN: 'Contracts', 
-    labelPT: 'Contratos',   
-  },      
+  },       
   {
     path: '/projects',
     component: <Projects/>,

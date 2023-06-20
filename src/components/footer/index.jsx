@@ -57,22 +57,7 @@ export default function Footer() {
                         icon="pi pi-discord"
                         severity="help"
                         rounded outlined />
-                </CopyToClipboard>
-                <a target='_blank' href='https://www.facebook.com/devStraub' style={{ textDecoration: 'none' }}>
-                    <Button
-                        tooltip='Facebook'
-                        tooltipOptions={{ position: 'top' }}
-                        icon="pi pi-facebook"
-                        severity="info"
-                        rounded outlined />
-                </a>  
-                <a target='_blank' href={CV} download style={{ textDecoration: 'none' }}>
-                    <Button
-                        tooltip='CV'
-                        tooltipOptions={{ position: 'top' }}
-                        icon="pi pi-id-card"
-                        rounded outlined />
-                </a>                    
+                </CopyToClipboard>                    
             </div>
         </>
     )
