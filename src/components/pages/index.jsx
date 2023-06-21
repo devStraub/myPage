@@ -24,28 +24,22 @@ export default function Pages() {
 
     return (
         <>
-            <main>
-                <Card className="text-center" bg='dark' text='white' style={{ width: '100%', minHeight: '100vh' }}>
-                    <Card.Header>
-                        <header>
-                            <Header />
-                        </header>
-                    </Card.Header>
-                    <Card.Body style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
-
-                        {navigationMode === 'monopage'
-                            ?
-                            page
-                            :
-                            <RouteList />
-                        }
-
-                    </Card.Body>
-                    <Card.Footer>
-                        <Footer />
-                    </Card.Footer>
-                </Card>
+            <header style={{ backgroundColor: 'var(--surface-0)'}}>
+                <Header />
+            </header>
+            <main style={{ backgroundColor: 'var(--bluegray-900)'}}>
+                <div style={{ padding: '5rem'}}>
+                    {navigationMode === 'monopage'
+                        ?
+                        page
+                        :
+                        <RouteList />
+                    }
+                </div>
             </main>
+            <footer style={{ backgroundColor: 'var(--surface-0)'}}>
+                <Footer />
+            </footer>
             <Overlay />
         </>
     )
