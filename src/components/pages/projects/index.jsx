@@ -30,25 +30,25 @@ export default function Projects() {
             language: <DiJava style={{ fontSize: '50px' }} />,
             githubLink: 'https://github.com/devStraub/BirtAPI',
             description: 'description',
-            name: 'Birt Report API',
+            name: 'Birt Report',
         },
         {
             language: <DiJava style={{ fontSize: '50px' }} />,
             githubLink: 'https://github.com/devStraub/JapserAPI',
             description: 'description',
-            name: 'Jasper Report API',
+            name: 'Jasper Report',
         },
         {
             language: <DiJava style={{ fontSize: '50px' }} />,
             githubLink: 'https://github.com/devStraub/TokenAPI',
             description: 'description',
-            name: 'Token API',
+            name: 'Token',
         },            
         {
             language: <DiJava style={{ fontSize: '50px' }} />,
             githubLink: 'https://github.com/devStraub/emailSenderAPI',
             description: 'description',
-            name: 'Email Sender API',
+            name: 'Email Sender',
         },           
     ]
 

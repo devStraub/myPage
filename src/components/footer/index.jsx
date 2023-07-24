@@ -49,15 +49,7 @@ export default function Footer() {
                         icon="pi pi-linkedin"
                         severity="info"
                         rounded outlined />
-                </a>
-                <CopyToClipboard text="Michel Pech#1242" onCopy={() => dispatch(showToast({ severity: 'info', summary: 'Discord Profile copied!' }))}>
-                    <Button
-                        tooltip='Discord'
-                        tooltipOptions={{ position: 'top' }}
-                        icon="pi pi-discord"
-                        severity="help"
-                        rounded outlined />
-                </CopyToClipboard>                    
+                </a>                 
             </div>
         </>
     )
