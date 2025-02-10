@@ -10,12 +10,12 @@ import './page.css'
 import Card from 'react-bootstrap/Card';
 
 // Components
-import Header from '../header'
-import Footer from '../footer'
+import Header from '../components/header'
+import Footer from '../components/footer'
 
 // Routes
-import { RouteList } from '../../routes';
-import Overlay from '../overlay';
+import { RouteList } from '../routes';
+import Overlay from '../components/overlay';
 
 export default function Pages() {
 

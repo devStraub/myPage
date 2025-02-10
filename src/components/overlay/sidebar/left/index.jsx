@@ -10,7 +10,7 @@ import { Sidebar } from 'primereact/sidebar'
 import { Button } from 'primereact/button';
 
 // Components
-import Projects from '../../../pages/projects'
+import Projects from '../../../../pages/projects'
         
 export default function LeftSidebar() {
 

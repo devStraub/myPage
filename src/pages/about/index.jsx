@@ -13,7 +13,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
 // Resources
-import Photo from '../../../resources/images/13937937_1207669349257383_272992765336949516_o.jpg'
+import Photo from '../../resources/images/13937937_1207669349257383_272992765336949516_o.jpg'
 
 export default function About() {
 
@@ -48,11 +48,7 @@ export default function About() {
                                         {language === 'PT' && "Nascimento"}
                                     </strong>
                                 </td>
-                                <td align='right'>27/08/1995</td>
-                                <td>
-                                    {language === 'EN' && "27 Years"}
-                                    {language === 'PT' && "27 Anos"}
-                                </td>
+                                <td colSpan="2" align='center'>27/08/1995</td>
                             </tr>
                             <tr>
                                 <td align='left'>
@@ -61,11 +57,10 @@ export default function About() {
                                         {language === 'PT' && "Nacionalidade"}
                                     </strong>
                                 </td>
-                                <td align='right'>
+                                <td colSpan="2" align='center'>
                                     {language === 'EN' && "Brazilian"}
                                     {language === 'PT' && "Brasileiro"}
                                 </td>
-                                <td>BR</td>
                             </tr>
                             <tr>
                                 <td align='left'>

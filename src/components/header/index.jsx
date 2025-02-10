@@ -13,7 +13,7 @@ import { Button } from 'primereact/button';
 import { DiCode } from "react-icons/di";
 
 // Components
-import Home from '../pages/home';
+import Home from '../../pages/home';
 
 export default function Header() {
 

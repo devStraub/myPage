@@ -1,6 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit'
 
-import Home from '../../../../components/pages/home'
+import Home from '../../../../pages/home'
 
 export const pageSlice = createSlice({
     name: 'page',

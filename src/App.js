@@ -20,7 +20,7 @@ import './App.css';
 
 // Components
 import Auth from './components/auth'
-import Pages from './components/pages'
+import Pages from './pages'
 
 function App() {
   const authenticated = useSelector(state => state.AuthController.authenticated)
